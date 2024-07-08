@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express')
 const routes = require('./routes/index');
 const cors = require('cors')
@@ -7,13 +8,15 @@ const HandleDatabaseLogs = require('./middlewares/logsMiddleware');
 
 const app = express();
 
+const { FRONT_URL } = process.env
+
 // middlewares
 app.use(express.json());
 
 app.use(morgan('dev'))
 
 app.use(cors({
-    origin: 'http://localhost:5173'
+    origin: FRONT_URL
 }))
 
 

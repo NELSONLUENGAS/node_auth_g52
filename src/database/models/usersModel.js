@@ -1,4 +1,4 @@
-const database = require('../dbConfig');
+const { database } = require('../dbConfig');
 const { handleHashPassword } = require('../../utils/utils')
 
 const addUser = async (email, password, role) => {
