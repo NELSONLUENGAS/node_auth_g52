@@ -20,7 +20,9 @@ const authMiddleware = async (req, res, next) => {
 
             next()
         } else {
-            throw new Error('Authorization')
+            let authError = new Error('Authorization')
+            authError.code = 401
+            authError.msg = authError.message
         }
 
     } catch (error) {
