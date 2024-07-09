@@ -6,17 +6,22 @@ const authMiddleware = async (req, res, next) => {
     try {
         const Authorization = req.header("Authorization")
 
-        const token = Authorization.split("Bearer ")[1]
+        if (Authorization) {
 
-        jwt.verify(token, process.env.JWT_SECRET)
+            const token = Authorization.split("Bearer ")[1]
 
-        const { email } = jwt.decode(token)
+            jwt.verify(token, process.env.JWT_SECRET)
 
-        req.user = {
-            email
+            const { email } = jwt.decode(token)
+
+            req.user = {
+                email
+            }
+
+            next()
+        } else {
+            throw new Error('Authorization')
         }
-
-        next()
 
     } catch (error) {
         next(error)
