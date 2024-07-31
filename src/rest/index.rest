@@ -1,9 +1,9 @@
-# POST http://127.0.0.1:3000/api/users/register
-POST https://node-auth-g52.onrender.com/api/users/register
+# POST https://node-auth-g52.onrender.com/api/users/register
+POST http://127.0.0.1:3000/api/users/register
 Content-Type: application/json
 
 {
-    "email": "pepito@gmail.com", 
+    "email": "pepito1@gmail.com", 
     "password": "12345", 
     "role": "admin"
 }
@@ -15,7 +15,7 @@ Content-Type: application/json
 
 
 {
-    "email": "pepito@gmail.com", 
+    "email": "pepito1@gmail.com", 
     "password": "12345"
 }
 
@@ -23,4 +23,4 @@ Content-Type: application/json
 # GET  http://127.0.0.1:3000/api/users/perfil
 GET  https://node-auth-g52.onrender.com/api/users/perfil
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBlcGl0b0BnbWFpbC5jb20iLCJpYXQiOjE3MTc2MzQ1MTd9._6oV5irl8C53LcSvsR4otUIXAokWmHrnlIhPbnbpZnc
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBlcGl0bzFAZ21haWwuY29tIiwiaWF0IjoxNzIwNDg0OTIxfQ.kWKUwbyTRehnmKxOMH7N6DJ6vzXBXmPcBjJNoVUldM4

@@ -54,8 +54,7 @@ const getPasswordUserByEmail = async (email) => {
     const { rows } = await database.query(consulta, values)
 
     const user = rows[0];
-
-    return user.password
+    return user?.password
 }
 
 
